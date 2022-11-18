@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { GlobalContext } from '../contexts/GlobalState';
 
 const AddTransaction = () => {
@@ -19,9 +19,14 @@ const AddTransaction = () => {
         }
 
         addTransaction(newTransaction);
+        localStorage.setItem('transactions', JSON.stringify(newTransaction))
         setText("")
         setAmount(0)
     }
+
+    useEffect(() => {
+        localStorage.setItem('transactions', JSON.stringify(transactions))
+    }, [transactions])
 
     return (
         <>
