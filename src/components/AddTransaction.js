@@ -5,7 +5,7 @@ const AddTransaction = () => {
     const { addTransaction, transactions } = useContext(GlobalContext);
 
     const [text, setText] = useState("");
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ const AddTransaction = () => {
         addTransaction(newTransaction);
         localStorage.setItem('transactions', JSON.stringify(newTransaction))
         setText("")
-        setAmount(0)
+        setAmount("")
     }
 
     useEffect(() => {

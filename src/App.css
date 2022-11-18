@@ -110,6 +110,8 @@ input[type='number'] {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 
 .list li {
@@ -155,10 +157,25 @@ input[type='number'] {
     h1, h2, h4 {
         text-align: center;
     }
+    h3 {
+        margin: 20px 0 10px;
+    }
+    h1 {
+        font-size: 26px;
+    }
     .container {
         padding: 0 20px;
     }
     .inc-exp-container {
         padding: 5px 15px;
+    }
+    .list {
+        overflow-y: scroll;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        max-height: 156px;
+    }
+    .money {
+        font-size: 17px;
     }
 }
